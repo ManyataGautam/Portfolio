@@ -19,31 +19,9 @@
                     }
     .header, .main, .footer {
         /* Translucent glass effect */
-        background-color: rgba(255, 255, 255, 0.3); 
+        background-color: rgba(20, 20, 20, 0.7); 
         backdrop-filter: blur(10px);
-        .button {
-                body.dark-theme,
-        body.dark-mode {
-            background-color: #000000 !important;
-            /* Black background */
-            color: #ffffff !important;
-        }
-        /* Force all text to white in dark mode */
-        body.dark-theme *, body.dark-mode * {
-            color: #ffffff !important;
-        }
-        /* Adjust containers for dark mode */
-        body.dark-theme .header,
-        body.dark-theme .main,
-        body.dark-theme .footer,
-        body.dark-mode .header,
-        body.dark-mode .main,
-        body.dark-mode .footer {
-            background-color: rgba(20, 20, 20, 0.7) !important;
-            /* Darker translucent background */
-            backdrop-filter: blur(10px);
-        }
-        /* Ensure button background remains brown */
+    }
         body.dark-theme .button, body.dark-mode .button {
             background-color: #4a3728 !important; /* Keep Brown */
         }
@@ -509,6 +487,7 @@
         }
     });
     </script>
+
 
 
 
