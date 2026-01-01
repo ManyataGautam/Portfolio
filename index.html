@@ -157,12 +157,80 @@
             color: #000000 !important;
             font-weight: 700;
         }
+
+        /* --- WRITINGS SECTION --- */
+        .writings__container {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .writings__card {
+            background-color: var(--container-color);
+            padding: 2.5rem 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .writings__card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .writings__icon {
+            font-size: 2.5rem;
+            color: var(--title-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .writings__title {
+            font-size: var(--h3-font-size);
+            margin-bottom: 0.75rem;
+        }
+
+        .writings__description {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .writings__button {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 0.5rem;
+            font-weight: var(--font-medium);
+            color: var(--title-color);
+            transition: column-gap 0.3s;
+        }
+
+        .writings__button:hover {
+            column-gap: 0.75rem;
+        }
+
+        .writings__button-icon {
+            font-size: 1.25rem;
+        }
+
+        /* Dark Mode Adjustments for Writings */
+        body.dark-theme .writings__card,
+        body.dark-mode .writings__card {
+            border-color: rgba(255, 255, 255, 0.1);
+            background-color: #1a1a1a;
+        }
+
+        @media screen and (max-width: 576px) {
+            .writings__container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 
-    <title>Writings | Manyata</title>
-</head>
-
-<body>
     <title>Manyata</title>
 </head>
 
@@ -191,6 +259,11 @@
                     <li class="nav__item">
                         <a href="#qualification" class="nav__link">
                             <i class="uil uil-briefcase-alt nav__icon"></i>Qualification
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#writings" class="nav__link">
+                            <i class="uil uil-pen nav__icon"></i>Writings
                         </a>
                     </li>
                     <li class="nav__item">
@@ -418,36 +491,7 @@
                 </div>
             </div>
         </section>
-       </div>            
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        <section class="section">
-            <h2 class="section__title">My Poems</h2>
-            <span class="section__subtitle">A collection of my thoughts</span>
 
-            <div class="poems__container container grid">
-                <!-- Sample Poem 1 -->
-                <article class="poem__card">
-                    <h3 class="poem__title">The girl; anew </h3>
-                    <p class="poem__snippet">
-                       Supposed to write every feeling <br>
-                        Forced to trap them into words <br>
-                        Are her thoughts even worth revealing? <br>
-                        She questions the world above
-                    </p>
-                    <a href="#" class="button button--small button--link">Read More</a>
-                </article>
-
-                <!-- Placeholder for future poems -->
-                <article class="poem__card">
-                    <h3 class="poem__title">Coming Soon...</h3>
-                    <p class="poem__snippet">
-                        More poetry will be uploaded here soon.
-                    </p>
-                </article>
-            </div>
-        </section>
-    </main>
         <!--==================== QUALIFICATION ====================-->
         <section class="qualification section" id="qualification">
             <h2 class="section__title">Qualification</h2>
@@ -528,6 +572,39 @@
         </section>
 
 
+
+        <!--==================== WRITINGS ====================-->
+        <section class="writings section" id="writings">
+            <h2 class="section__title">Writings</h2>
+            <span class="section__subtitle">My thoughts and words</span>
+
+            <div class="writings__container container grid">
+                <!-- Card 1: Poems -->
+                <div class="writings__card">
+                    <i class="uil uil-pen writings__icon"></i>
+                    <h3 class="writings__title">Poems</h3>
+                    <p class="writings__description">
+                        Verses that capture emotions, moments, and the unspoken beauty of life.
+                    </p>
+                    <a href="poems.html" class="writings__button">
+                        Read Poems <i class="uil uil-arrow-right writings__button-icon"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2: Articles -->
+                <div class="writings__card">
+                    <i class="uil uil-newspaper writings__icon"></i>
+                    <h3 class="writings__title">Articles</h3>
+                    <p class="writings__description">
+                        Perspectives on law, society, and the dynamics of our changing world.
+                    </p>
+                    <a href="#" class="writings__button">
+                        Read Articles <i class="uil uil-arrow-right writings__button-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!--==================== CONTACT ME ====================-->
         <section class="contact section" id="contact">
             <h2 class="section__title">Contact me</h2>
@@ -597,8 +674,7 @@
             </div>
 
         </section>
-         
-
+    </main>
 
     <!--==================== FOOTER ====================-->
     <footer class="footer">
@@ -680,10 +756,3 @@
         }
     });
 </script>
-
-
-
-
-
-
-
