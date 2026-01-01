@@ -159,108 +159,6 @@
         }
     </style>
 
-        /* --- WRITINGS SPLIT LAYOUT --- */
-        .writings__layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .writing__column {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .column__header {
-            margin-bottom: 2rem;
-            text-align: center;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .dark-theme .column__header,
-        .dark-mode .column__header {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .writing__card {
-            background-color: var(--container-color);
-            padding: 2.5rem;
-            border-radius: 2px;
-            /* Premium sharp/soft blend */
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-            transition: all 0.4s ease;
-            cursor: pointer;
-            border: 1px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .writing__card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-            border-color: rgba(109, 84, 72, 0.1);
-        }
-
-        .writing__card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background-color: var(--first-color);
-            transform: scaleY(0);
-            transition: transform 0.3s ease;
-        }
-
-        .writing__card:hover::before {
-            transform: scaleY(1);
-        }
-
-        .writing__title {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            font-family: var(--title-font);
-        }
-
-        .writing__snippet {
-            font-size: 0.95rem;
-            color: var(--text-color);
-            opacity: 0.8;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .writing__meta {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--first-color);
-            font-weight: 500;
-        }
-
-        body.dark-theme .writing__card,
-        body.dark-mode .writing__card {
-            background-color: #111;
-            border: 1px solid #222;
-        }
-
-        body.dark-theme .writing__card:hover,
-        body.dark-mode .writing__card:hover {
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        @media screen and (max-width: 768px) {
-            .writings__layout {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-        }
-    </style>
-
     <title>Writings | Manyata</title>
 </head>
 
@@ -782,6 +680,7 @@
         }
     });
 </script>
+
 
 
 
