@@ -183,10 +183,19 @@
         }
 
         .writings__icon {
-            font-size: 2.5rem;
-            color: var(--title-color);
-            margin-bottom: 1rem;
-            display: block;
+            display: none;
+            /* Hide old icon class if used elsewhere, or just remove */
+        }
+
+        .writings__img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            /* Circle or keep it square: 1rem */
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
         .writings__title {
@@ -587,7 +596,8 @@
             <div class="writings__container container grid">
                 <!-- Card 1: Poems -->
                 <div class="writings__card">
-                    <i class="uil uil-pen writings__icon"></i>
+                    <!-- <i class="uil uil-pen writings__icon"></i> -->
+                    <img src="packages\images\man-1.jpg" alt="Poems" class="writings__img">
                     <h3 class="writings__title">Poems</h3>
                     <p class="writings__description">
                         Verses that capture emotions, moments, and the unspoken beauty of life.
@@ -599,7 +609,8 @@
 
                 <!-- Card 2: Articles -->
                 <div class="writings__card">
-                    <i class="uil uil-newspaper writings__icon"></i>
+                    <!-- <i class="uil uil-newspaper writings__icon"></i> -->
+                    <img src="packages\images\man-2.jpg" alt="Articles" class="writings__img">
                     <h3 class="writings__title">Articles</h3>
                     <p class="writings__description">
                         Perspectives on law, society, and the dynamics of our changing world.
